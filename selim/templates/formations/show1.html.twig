@@ -1,0 +1,59 @@
+
+
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Employe{% endblock %}
+
+{% block body %}
+    <h1>Employe</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ employe.id }}</td>
+            </tr>
+          
+            <tr>
+                <th>Cin</th>
+                <td>{{ employe.Cin }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ employe.Nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ employe.Prenom }}</td>
+            </tr>
+            <tr>
+                <th>Fonction</th>
+                <td>{{ employe.Fonction }}</td>
+            </tr>
+            <tr>
+                <th>Direction</th>
+                <td>{{ employe.Direction }}</td>
+            </tr>
+            <tr>
+                <th>Salaire</th>
+                <td>{{ employe.Salaire }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ employe.Telephone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ employe.Email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/listemploye"><button type="button" class="btn btn-warning">Retour à la liste</button></a>
+
+    
+
+    
+{% endblock %}

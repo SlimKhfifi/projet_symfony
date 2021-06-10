@@ -1,0 +1,51 @@
+
+
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Formation{% endblock %}
+
+{% block body %}
+    <h1>Formation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ formation.id }}</td>
+            </tr>
+          
+            <tr>
+                <th>Nom formation</th>
+                <td>{{ formation.NomFormation }}</td>
+            </tr>
+            <tr>
+                <th>Centre</th>
+                <td>{{ formation.Centre }}</td>
+            </tr>
+            <tr>
+                <th>Formateur</th>
+                <td>{{ formation.Formateur }}</td>
+            </tr>
+            <tr>
+                <th>Date debut</th>
+                <td>{{ formation.DateDebut }}</td>
+            </tr>
+            <tr>
+                <th>Date fin</th>
+                <td>{{ formation.DateFin }}</td>
+            </tr>
+            <tr>
+                <th>Lieu</th>
+                <td>{{ formation.Lieu }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/"><button type="button" class="btn btn-warning">Retour à la liste</button></a>
+
+    
+
+    
+{% endblock %}

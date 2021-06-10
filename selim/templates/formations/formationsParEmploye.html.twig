@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+ {% block title%} Liste des Formations par Employe{% endblock %}
+  {% block body %}
+   {{ form_start(form) }} 
+   <div class="form-row align-items-end" > <div class="col">
+    {{ form_row(form.employe) }} </div> <div class="col">
+     <div class="form-group"> <button type="submit" class="btn btn-success">Rechercher</button>
+      </div> </div> </div> {{ form_end(form) }} {% if formations %} 
+      <table id="formations" class="table table-striped">
+       <thead> <tr> 
+       <th>NomFormation</th>
+       <th>Centre</th>
+       <th>Formateur</th>
+       <th>DateDebut</th>
+       <th>DateFin</th>
+       <th>Lieu</th>
+        <th>Employe</th>
+         <th>Actions</th>
+          </tr> </thead>
+           <tbody> {% for formation in formations %} <tr>
+            <td>{{ formation.NomFormation }}</td> <td>{{ formation.Centre }}</td><td>{{ formation.Formateur }}</td><td>{{ formation.DateDebut }}</td><td>{{ formation.DateFin }}</td><td>{{ formation.Lieu }}</td>
+             <td>{{ formation.employe.Cin }}</td> <td>
+              <a href="/formation/show/{{ formation.id }}" class="btn btn-warning">Détails</a>
+               <a href="/formation/edit/{{ formation.id }}" class="btn btn-success">Modifier</a>
+ <a href="/formation/delete/{{ formation.id }}" class="btn btn-danger" onclick="return confirm('Etes-vous sûr de supprimer cette formation?');">Supprimer</a>
+  </td> </tr> {% endfor %} </tbody> </table> {% else %} <p>Aucun Formations</p> {% endif %} {% endblock %}

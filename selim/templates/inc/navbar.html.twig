@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3"> <div class="container">
+
+  <a class="navbar-brand" href="{{ path('lister')}}">Gestion  Formations</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+
+
+
+
+  
+
+
+      
+     
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Gestion Formations
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ path('lister')}}">Lister Formations</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ path('new_formation')}}">Planifié Formation</a>
+         <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ path('recherche')}}">Rechercher Formation Par Nom</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ path('formation_par_emp')}}">Rechercher Formation Par CIN d'employe</a>
+        </div>
+      </li>
+
+     <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Gestion Employes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ path('listeemploye')}}">Lister Employes</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ path('new_employe')}}">Ajouter Employe</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ path('employe_par_salaire')}}">Rechercher Employe Par Salaire</a>
+         
+        </div>
+      </li>
+     
+     
+        
+        
+          
+          
+  
+    
+     
+     
+    </ul>
+
+
+    
+    <span>
+    <button type="button" class="btn btn-danger m-2">SLIM</button>
+</span><span>
+    <button type="button" class="btn btn-danger">Log out</button>
+    </div>
+  </div>
+</nav>
